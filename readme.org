@@ -1,0 +1,14 @@
+*  What's this?
+It provides ja->en dictionary for naming functions/variables.
+This is an unofficial emacs interface for codic.jp.
+
+* 以下日本語
+これは[[https://codic.jp][codic.jp]] の非公式Emacsインターフェースです。
+関数や変数の名付けに特化した日本語->英語翻訳です。
+
+** 使い方
+ 1. https://codic.jp/signup の指示に従って codic.jp にサインアップします。
+ 2. ログイン後、https://codic.jp/my/api_status にアクセスし、アクセストークンをコピーします。
+ 3. Emacsで M-x codic-set-access-token を呼び、アクセストークンをセットします。
+ 4. M-x codic-translate M-x codic-translate-dwim などが使えるようになります。
+
