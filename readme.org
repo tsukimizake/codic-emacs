@@ -4,7 +4,7 @@ This is an unofficial emacs interface for codic.jp.
 
 * 以下日本語
 これは[[https://codic.jp][codic.jp]] の非公式Emacsインターフェースです。
-関数や変数の名付けに特化した日本語->英語翻訳です。
+関数や変数の名付けに特化した日本語->英語翻訳を提供します。
 
 ** 使い方
  1. https://codic.jp/signup の指示に従って codic.jp にサインアップします。
