@@ -25,9 +25,9 @@
 ;; make english names using codic.jp
 
 ;;; 使い方
-;; 1: https://codic.jp/signup の指示に従って codic.jp にサインアップする
-;; 2: https://codic.jp/my/api_status にアクセスし、アクセストークンをコピーする
-;; 3: Emacsで M-x codic-set-access-token を呼び、アクセストークンをセットする
+;; 1: https://codic.jp/signup の指示に従って codic.jp にサインアップします。
+;; 2: https://codic.jp/my/api_status にアクセスし、アクセストークンをコピーします。
+;; 3: Emacsで M-x codic-set-access-token を呼び、アクセストークンをセットします。
 ;; 4: M-x codic-translate M-x codic-translate-dwim などが使えるようになります。
 
 
