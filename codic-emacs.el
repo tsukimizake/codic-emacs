@@ -51,7 +51,7 @@
 
 
 ;; request
-(cl-defun codic-request (&key access_token text project_id casing acronym_style)
+(cl-defun codic-request (&key access_token text project_id casing acronym_style on_success)
   (let ((auth (format "Bearer %s" access_token)))
     (request "https://api.codic.jp/v1/engine/translate.json"
 	     :type "GET"
@@ -70,7 +70,7 @@
 	     :success (cl-function
 		       (lambda (&key data &allow-other-keys)
 			 (let ((res (format "%S" data)))
-			   (message (format "%S" (codic-parse-succeeded res))))))
+			   (funcall on_success (format "%s" (codic-parse-succeeded res))))))
 	     )))
 
 ;; example
@@ -114,7 +114,7 @@
 (defun codic-translate (str)
   "入力したクエリを翻訳します。"
   (interactive "sQuery:")
-  (codic-request :access_token codic--access-token :text str))
+  (codic-request :access_token codic--access-token :text str :on_success 'insert))
 
 (defun codic-translate-dwim ()
   "リージョンがアクティブならその文章を、そうでなければ入力した文を翻訳します。"
@@ -123,6 +123,7 @@
       (codic-translate (buffer-substring (region-beginning) (region-end)))
     (call-interactively 'codic-translate))
   )
+
 
 
 
